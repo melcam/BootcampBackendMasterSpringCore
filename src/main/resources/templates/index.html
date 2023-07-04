@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola mundo</title>
+</head>
+<body>
+<ul>
+    <li><a th:href="@{/params/string(texto='hola mundo')}">/params/string?texto="Hola mundo"</a></li>
+    <li><a th:href="@{/params/mix-params(saludo='como estas melcam',numero=5)}">/params/mix-params?saludo="Hola mundo"</a></li>
+    <li><a th:href="@{/params/mix-params-request(saludo='como estas request',numero=11)}">/params/mix-params-reques?saludo="Hola mundo"</a></li>
+</ul>
+
+
+<h th:text="${titulo}">Hola mundo</h>
+<table th:if="${usuarios.size()>0}">
+    <thead><tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+    </tr></thead>
+    <tbody>
+    <tr th:each="user:${usuarios}">
+        <td th:text="${user.nombre}"></td>
+        <td th:text="${user.apellido}"></td>
+        <td th:text="${user.email}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
