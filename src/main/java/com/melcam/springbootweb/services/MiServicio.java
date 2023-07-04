@@ -2,7 +2,7 @@ package com.melcam.springbootweb.services;
 
 import org.springframework.stereotype.Service;
 
-@Service("miServicio")
+//@Service("miServicio")
 public class MiServicio implements IServicio {
     @Override
     public String operacion() {

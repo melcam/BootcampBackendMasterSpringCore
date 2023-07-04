@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("inyeccion")
 public class DependencyInjection {
     @Autowired
-    @Qualifier("miServicioCompleto")
+    @Qualifier("miServicio")
     private IServicio servicio;
 
     @GetMapping("/")
